@@ -1,0 +1,129 @@
+.newForm input{
+    height: 44px;
+    width: 100%;
+    padding: 0 10px;
+    border: 1px solid #e7e9eb;
+    background: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -khtml-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.buttonblue {
+  background-color: #3f81c7;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+
+.loginContainer {
+    position: relative;
+    margin: 130px auto 0;
+    padding: 30px 10% 50px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.invalidFeedback {
+    width: 100%;
+    margin-top: -10px;
+    padding-bottom: 20px;
+    font-size: .875em;
+    color: #dc3545;
+}
+
+.loginContainerBordered {
+    margin: 120px auto 0;
+    padding: 42px 42px 36px;
+    border: 1px solid #eaeced;
+    overflow: hidden;
+}
+
+.middle {
+    margin: 0 auto;
+    max-width: 460px;
+    position: relative;
+}
+
+.myminifactory-logo {
+    margin: 0 auto 20px;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.myminifactory-logo-long {
+    background: transparent url(../img/myminifactory.jpeg) top center no-repeat;
+    background-size: auto 28px;
+    width: 129px;
+    height: 32px;
+    display: block;
+}
+
+.loginOrForgot {
+    width: 100%;
+}
+
+.loginButton {
+    padding-left: 21px;
+    padding-right: 21px;
+
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-align: center;
+    display: inline-block;
+    padding: 7px 14px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+}
+
+.signUpButton {
+    width: 100%;
+    height: 45px;
+}
+
+.googleSeparator {
+    border-top: 1px solid #cbd2d6;
+    position: relative;
+    margin: 25px 0 10px;
+    text-align: center;
+}
+
+.textInSeparator {
+    background-color: #fff;
+    padding: 0 .5em;
+    position: relative;
+    color: #6c7378;
+    top: -.7em;
+}
+
+@media only screen and (max-width: 959px) {
+	.loginContainer {
+		margin-top: 130px;
+	    padding: 0 8% 30px;
+	    width: 100%;
+	    background-color: #fff;
+	}
+}
+
+@media only screen and (max-width: 959px) {
+	.loginContainerBordered {
+		border: 0;
+	    margin-top: 130px;
+	    padding: 0 8% 30px;
+	    width: 100%;
+	    background-color: #fff;
+	}
+}

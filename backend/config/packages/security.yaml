@@ -1,0 +1,44 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: bcrypt
+    providers:
+        user_provider:
+            entity:
+                class: App\Entity\User
+                property: username
+    firewalls:
+        api_token_refresh:
+            pattern: ^/auth/refresh
+            stateless: true
+            anonymous: true
+        login:
+            pattern: ^/auth/login
+            stateless: true
+            anonymous: true
+            provider: user_provider
+            json_login:
+                check_path: /auth/login
+                username_path: username
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+        api_register:
+            pattern:  ^/auth/register
+            stateless: true
+            anonymous: true
+        api:
+            pattern: ^/api
+            stateless: true
+            anonymous: false
+            provider: user_provider
+            guard:
+                authenticators:
+                    - lexik_jwt_authentication.jwt_token_authenticator
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main:
+            pattern: ^/
+            security: false
+    access_control:
