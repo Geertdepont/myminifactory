@@ -1,4 +1,4 @@
-import { CREATE_USER, FETCH_USERS, SET_USERS } from "./types";
+import { FETCH_USERS, SET_USERS } from "./types";
 import { apiAction } from './api';
 import { BASE_URL } from '../constants';
 

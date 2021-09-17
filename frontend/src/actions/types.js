@@ -5,6 +5,7 @@ export const FETCH_USERS = "FETCH_USERS";
 
 //Login
 export const LOGIN = "LOGIN";
+export const LOGOUT = "LOGOUT";
 export const SET_JWT = "SET_JWT";
 export const REFRESH_TOKEN = "REFRESH_TOKEN";
 

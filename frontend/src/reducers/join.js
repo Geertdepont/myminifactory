@@ -26,11 +26,14 @@ export default function join (state = {}, action) {
             }
             return state;
         case API_ERROR:
-          return {
-            ...state,
-            isLoadingData: false,
-            error: action.error.response 
-          };
+          if (action.payload === CREATE_USER) {
+            return {
+              ...state,
+              isLoadingData: false,
+              error: action.error.response 
+            };
+          }
+          return state;
         default:
             return state;
     }

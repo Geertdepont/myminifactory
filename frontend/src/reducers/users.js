@@ -28,11 +28,14 @@ export default function user(state = {}, action) {
               }
             return state;
         case API_ERROR:
-          return {
-            ...state,
-            isLoadingData: false,
-            error: action.error.response 
-          };
+            if (action.payload === FETCH_USERS) {
+                return {
+                  ...state,
+                  isLoadingData: false,
+                  error: action.error.response,
+                };
+            } 
+            return state;
         default:
             return state;
     }

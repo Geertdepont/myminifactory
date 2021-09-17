@@ -20,13 +20,6 @@ export default function login (state = {}, action) {
                   error: "",
                 };
               }
-              if (action.payload === REFRESH_TOKEN) {
-                return {
-                  ...state,
-                  isLoadingData: true,
-                  error: "",
-                };
-              }
           // eslint-disable-next-line
         case API_END:
             if (action.payload === LOGIN) {
@@ -42,12 +35,19 @@ export default function login (state = {}, action) {
                 };
             }
             return state;
+          // eslint-disable-next-line
         case API_ERROR:
-          return {
-            ...state,
-            isLoadingData: false,
-            error: action.error.response,
-          };
+          if (action.payload === LOGIN) {
+            return {
+              ...state,
+              isLoadingData: false,
+              error: action.error.response,
+            };
+          } 
+          return state;
+          // eslint-disable-next-line
+        case REFRESH_TOKEN:
+          return { data: action.payload };
         default:
             return state;
     }

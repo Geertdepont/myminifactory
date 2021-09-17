@@ -33,7 +33,6 @@ class JoinPage extends Component {
   }
 
   successfulCreation(data) {
-    console.log(data);
     this.props.setTokens(data);
   	this.props.history.push('/');
   }
